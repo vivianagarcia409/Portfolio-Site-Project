@@ -12,49 +12,49 @@
 
     <nav class="nav-bar">
         <ul class="nav-bar-left">
-            <li> <a class="nav-bar-item" href="About">About</a></li>
-            <li> <a class="nav-bar-item" href="Projects">Projects</a></li>
-            <li> <a class="nav-bar-item" href="Resume">Resume</a></li>
-            <li> <a class="nav-bar-item" href="Contact">Contact Me</a></li>
+            <li> <a class="nav-bar-item" href="#aboutMe">About</a></li>
+            <li> <a class="nav-bar-item" href="#projects">Projects</a></li>
+            <!-- <li> <a class="nav-bar-item" href="Resume">Resume</a></li> -->
+            <li> <a class="nav-bar-item" href="#contactMe">Contact Me</a></li>
         </ul>
         <ul class="nav-bar-center">
             <h4 id="first-name">V</h4>
             <h2 id="last-name">G</h2>
             <h4 id="middle-name">A</h4>
         </ul>
-        <ul class="nav-bar-right">
-            <li> <a href="https://www.linkedin.com/in/viviana-garcia-04/"><img
-                        src="images/linkedin-logo-png-black-9.png" alt="linked in" style="width:40px;height:40px;">
+        <!-- <ul class="nav-bar-socials">
+            <li> <a href="https://www.linkedin.com/in/viviana-garcia-04/">
+                    <img src="./images/linkedin-logo-png-black-9.png" alt="linked in" style="width:45px;height:45px;">
                 </a>
             </li>
-            <li> <a href="https://github.com/vivianagarcia409"><img src="./images/github-logo.png" alt="github"
-                        style="width:35px;height:35px;">
+            <li> <a href="https://github.com/vivianagarcia409">
+                    <img src="./images/github-logo.png" alt="github" style="width:35px;height:35px;">
                 </a>
             </li>
-        </ul>
+        </ul> -->
     </nav>
 
     <!-- section 1 Front Page -->
-    <header class="cactus-background" id="front-page">
+    <header class="orchid-background" id="front-page">
+
         <h1 id="name">Viviana Andrea Garcia</h1>
-        <h2 id="job-title">Full Stack Web Developer</h2>
+        <h2 id="job-title">Web Developer</h2>
+        <div class="photo-lineup">
+            <img src="./images/cell-phone.png" alt="cell-phone">
+            <img src="./images/laptop.png" alt="laptop">
+            <img src="./images/desktop-logo.png" alt="desktop">
+        </div>
     </header>
-    <div class="photo-lineup">
-        <img src="./images/cell-phone.png" alt="cell-phone" style="width:60px;height:60px;">
-        <img src="images/laptop.png" alt="laptop" style="width:60px;height:60px;">
-        <img src="images/desktop-logo.png" alt="desktop" style="width:60px;height:60px;">
-
-    </div>
-
     <!-- section 2 About Me-->
-    <div class="darker-background">
+    <div class="darker-background" id="aboutMe">
 
         <div class="about-me">
-            <img src="./images/headshot.png" alt="headshot" style="width: 300px;height: 300px;">
+            <img src="./images/headshot.png" alt="headshot">
 
         </div>
 
         <div class="about-me-info">
+            <h3>about me</h3>
             Having graduated from Florida International University at 23 with a degree in Psychology, I had a world
             of options at my feet. I began working as a front office/student affairs coordinator for a non-profit
             private organization for children with autism and related
@@ -73,7 +73,7 @@
 
     <!-- section 3 Projects-->
 
-    <div class="projects-background">
+    <div class="projects-background" id="projects">
 
         <div class="projects-title">
             <h1>Projects</h1>
@@ -91,7 +91,7 @@
     </div>
 
     <!-- section 4 Contact Me-->
-    <div class="contact-background">
+    <div class="contact-background" id="contactMe">
 
         <h1>Connect With Me</h1>
 
@@ -100,14 +100,35 @@
 
         </div>
 
-        <div class="contact-info">
+        <div class="contact-form">
+            <form id="contact-form" method="post" action="">
+                <input name="name" type="text" class="form-control" placeholder="Your Name" required>
 
+                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
+
+                <textarea name="message" class="form-control" placeholder="Message" rows="5" required>
+                    </textarea>
+
+                <input type="submit" class="form-control submit" value="send message">
+            </form>
 
         </div>
 
 
 
     </div>
+    <footer>
+        <ul class="nav-bar-socials">
+            <li> <a href="https://www.linkedin.com/in/viviana-garcia-04/">
+                    <img src="./images/linkedin-logo-png-black-9.png" alt="linked in" style="width:45px;height:45px;">
+                </a>
+            </li>
+            <li> <a href="https://github.com/vivianagarcia409">
+                    <img src="./images/github-logo.png" alt="github" style="width:35px;height:35px;">
+                </a>
+            </li>
+        </ul>
+    </footer>
 
 
 </body>
