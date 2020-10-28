@@ -2,44 +2,16 @@
 
 * {
     scroll-behavior: smooth;
+    box-sizing: border-box;
+    /* border: solid 1px red; */
 }
+
 
 body {
     font-family: 'Athiti';
     margin: 0;
     transition: 1.5s;
 }
-/* .nav-bar {
-    background-color:black;
-    margin: 0 auto;
-    border: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-}
-.nav-bar-left li{
-    text-decoration: none;
-    color: white;
-    display: inline;
-    flex-direction: row;
-    justify-content: space-around;
-
-}
-.nav-bar-center {
-    display: flex;
-    justify-content: center;
-    color: white;
-
-}
-ul.nav-bar-right {
-    align-items: flex-end;
-}
-.nav-bar-socials li {
-    display: inline;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-end;
-} */
 
 .nav-bar {
     display: flex;
@@ -48,6 +20,8 @@ ul.nav-bar-right {
     padding: 0;
     height: 60px;
     background-color: #222222;
+    position: fixed;
+    z-index: 1;
 }
 .nav-bar ul{
     /* border: 1px solid black; */
@@ -63,6 +37,12 @@ ul.nav-bar-right {
     justify-content: space-between;
     align-items: center;
 }
+
+.nav-bar-left li{
+    white-space: nowrap;
+    padding: 2px;
+}
+
 .nav-bar a {
     color: white;
     text-decoration: none;
@@ -75,6 +55,11 @@ ul.nav-bar-right {
     color: white;
     font-size: 1.5em;
 }
+
+#front-page {
+    padding: 15rem 0;
+}
+
 .orchid-background {
     display: flex;
     margin-top: 0px;
@@ -90,9 +75,19 @@ ul.nav-bar-right {
     height: 63vw;
 }
 
+#front-page.orchid-background {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: black;
+}
+#front-page section {
+    position: relative;
+    bottom: 3rem;
+    left: 2rem;
+}
+
 #name, #job-title, .photo-lineup{
-    position: absolute;
-    
+    /* position: absolute; */
     left: 6vw;
     font-size: 6vw;
     color:white;
@@ -110,36 +105,6 @@ ul.nav-bar-right {
     top:33vw;
 }
 
-
-/*
-#name {
-    font-size: 4vw;
-    display:flex;
-    color:  rgb(87, 58, 58);
-    width: 700px;
-    position: absolute;
-    top: 20%;
-    left: 35%;
-    transform: translate(-45%, -60%)
-}
-#job-title {
-    color:  rgb(87, 58, 58);;
-    font-size: 2vw;
-    position: absolute;
-    top: 32%;
-    left: 35%;
-    transform: translate(-45%, -60%)
-}
-/*
-.photo-lineup {
-    position: absolute;
-    top: 40%;
-    left: 25%;
-    width: 30px;
-    height: 30px;
-}*/
-
-
 .photo-lineup img {
     width: 8vw;
 } 
@@ -150,13 +115,17 @@ ul.nav-bar-right {
     flex-direction: column;
 }
 
+#aboutMe {
+    padding: 6rem 0;
+}
 .about-me img{ 
     width: 80vw;
+    border-radius: 20%;
 }
 
-
 .about-me {
-    margin: 20px; 
+    margin: 20px;
+
 }
 
 .about-me-info h3 {
@@ -166,62 +135,82 @@ ul.nav-bar-right {
 .about-me-info {
     color: white; 
     flex-wrap: wrap;
-    
     margin: 20px auto;
-    /* justify-content: center;  */
-    text-align: center;
+    padding: 0 20px;
+    text-align: justify;
     justify-content: flex-end;
+}
+
+#projects {
+    padding: 10rem 0;
 }
 .projects-background {
     background-color:black;
-    display: flex;
-    text-decoration: none;
+    color: white;
+    text-align: center;
 }
 .projects-background a{
     color: white;
     text-decoration: none; 
 }
-
-.projects-title {
-    color: white;
-    font-size: 2em;
+.projects-background h1{
+    margin: 0;
+    padding-bottom: 5rem;
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
 }
+
+.projects-list {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.projects-list div {
+    width: 20rem;
+    height: 20rem;
+    background-color: black;
+    margin: 2rem 0;
+    border-radius: 50%;
+    padding-top: 8.5rem;
+    text-transform: uppercase;
+}
+
+.projects-list div:hover {
+    box-shadow: 0px 0px 40px white;
+    transition: ease-in .3s;
+  }
+#contactMe {
+    padding: 10rem 0;
+}
+
 .contact-background {
     background-color: #272727;
-    display: flex;
-    justify-content: space-around;
 }
-h1{
+
+.contact-background h1{
     color: white;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 5rem;
+    text-transform: uppercase;
+}
+.contact-background form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    position: relative;
+    left: 25%;
 }
 
-form{
-    margin-top: 50px;
-    transition: all 4s ease-in-out;
-    color: rgb(87, 58, 58);
-}
-.form-control{
-    display: flex;
-    /* align-items: flex-end; */
-    width: 400px;
-    background: transparent;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid rgb(87, 58, 58);
-    color:white;
-    font-size: 18px;
-    margin-bottom: 16px;
-}
 
-.contact-form{
-    display: flex;
-    align-items: right;
-}
+
+
 footer {
     background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 60px;
     display: flex;
     list-style-type: none;
     justify-content: space-evenly;
@@ -232,10 +221,22 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     flex: 1;
+    margin: 0;
     padding: 30px;
+    height: 10vh;
+    width: 10vw;
 }
-ul.nav-bar-socials {
+.nav-bar-socials img {
     align-items: center;
+    height: 2rem;
+    width: 2rem;
+}
+
+.nav-bar-socials ul{
+    background-color: black;
+}
+.nav-bar-socials #resume {
+    color: white;
 }
 
 
@@ -253,10 +254,17 @@ ul.nav-bar-socials {
     .darker-background {
         flex-direction: row;
         align-items: center;
-        background-color:red;
+        background-color:#272727;
     }
     .about-me img{ 
         width: 300px;
     }
-    
+    .nav-bar-socials img {
+        align-items: center;
+        height: 3rem;
+        width: 3rem;
+    }
+    #aboutMe {
+        padding: 10rem 0;
+    }
 }
