@@ -47,13 +47,22 @@ body {
     color: white;
     text-decoration: none;
 }
-.nav-bar-center {
+/* #nav-bar-logo {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 30px;
     color: white;
     font-size: 1.5em;
+} */
+
+.logo {
+    width: 6vw;
+    /* top: 0; */
+    /* position: fixed; */
+    /* float: right; */
+    /* right: 0; */
+    /* margin-left: 300px; */
 }
 
 #front-page {
@@ -204,8 +213,6 @@ body {
 }
 
 
-
-
 footer {
     background-color: black;
     margin: 0;
@@ -235,14 +242,83 @@ footer {
 .nav-bar-socials ul{
     background-color: black;
 }
-.nav-bar-socials #resume {
+.nav-bar-socials .resume {
     color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
 
 
 
+@media only screen and (max-width: 375px){
 
+
+    html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+.nav-bar-left li{
+    display: none;
+ }
+.navBarMobile {
+    width: 25%;
+    height: 100vh;
+    padding-top: 25%;
+    background-color: black;
+    color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    float: right;
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10vh;
+    overflow: scroll;
+    justify-content: flex-start;
+    border: white solid 1px;
+
+} 
+.navBarMobile li {
+    padding: 35%;
+}
+
+.navBarMobile.active {
+    display: block;
+}
+.orchid-background {
+    width: 100vw;
+}
+
+.nav-bar {
+    display:flex;
+    align-items: flex-end;
+    flex-direction: column;
+    /* border: white solid 1px; */
+    /* justify-content: flex-start; */
+    margin-bottom: 10%;
+}
+.logo {
+    margin-right: 20px;
+    width: 12vw;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+}
+
+}
+
+@media (min-width: 401px){
+    .navBarMobile {
+        display: none;
+    }
+}
 
 
 
