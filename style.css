@@ -58,12 +58,41 @@ body {
 
 .logo {
     width: 6vw;
+    /* height: 10vh; */
     /* top: 0; */
     /* position: fixed; */
     /* float: right; */
     /* right: 0; */
     /* margin-left: 300px; */
 }
+
+#logo {
+    width: 2vw;
+    height: 1vh;
+    margin-left: -10vh;
+}
+
+.hamburger img {
+    width: 20vw;
+    height: 8vh;
+    margin-top: -4.5vh;
+    background-color: #222222;
+    padding: 2vw;
+   
+}
+
+/* .hamburger img {
+    width: 6vw;
+    margin-top: 2vh;
+    padding: 0 1vw;
+    margin: 0 auto;
+    height: 6.5vh;
+    background-color: #272727;
+    border: none;
+} */
+
+
+
 
 #front-page {
     padding: 15rem 0;
@@ -254,7 +283,6 @@ footer {
 
 @media only screen and (max-width: 375px){
 
-
     html, body {
         width: 100vw;
         margin: 0;
@@ -265,10 +293,11 @@ footer {
     display: none;
  }
 .navBarMobile {
-    width: 25%;
-    height: 100vh;
-    padding-top: 25%;
-    background-color: black;
+    width: 35vw;
+    height: 25vh;
+    padding-top: 7vh;
+    background-color: #272727;
+    opacity: .75;
     color: white;
     list-style: none;
     display: flex;
@@ -280,14 +309,21 @@ footer {
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 10vh;
-    overflow: scroll;
+    margin-top: 7.5vh;
+    overflow: hidden;
     justify-content: flex-start;
-    border: white solid 1px;
-
+    /* border: white solid 1px; */
 } 
+
+.navBarMobile li a {
+    z-index: 1001;
+    color: white;
+    font-size: 5vw;
+    text-transform: uppercase;
+    text-decoration: none;
+}
 .navBarMobile li {
-    padding: 35%;
+    padding: 10vh auto 10vh auto;
 }
 
 .navBarMobile.active {
@@ -304,13 +340,9 @@ footer {
     /* border: white solid 1px; */
     /* justify-content: flex-start; */
     margin-bottom: 10%;
+    position: fixed;
 }
-.logo {
-    margin-right: 20px;
-    width: 12vw;
-    margin-bottom: 50px;
-    padding-bottom: 20px;
-}
+
 
 }
 
@@ -330,7 +362,7 @@ footer {
     .darker-background {
         flex-direction: row;
         align-items: center;
-        background-color:#272727;
+        background-color:#222222;
     }
     .about-me img{ 
         width: 300px;
@@ -343,4 +375,13 @@ footer {
     #aboutMe {
         padding: 10rem 0;
     }
+   .hamburger img {
+       width: 5vw;
+       padding: 0;
+       margin-top: 1.5vw;
+       height: 5.687vh;
+       background-color: #222222;
+       border: none;
+   }
+
 }
